@@ -1,0 +1,25 @@
+body {
+    background: grey;
+}
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    margin-bottom: 200px;
+}
+.LoginButton {
+    margin-right: 20px;
+}
+.container {
+    padding: 25px;
+    max-width: 350px;
+    border: 1px solid red;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background: #ffffff;
+    border-radius: 10px;
+}
