@@ -1,17 +1,17 @@
 import React from 'react';
-
+import { withRouter, Link } from 'react-router-dom';
 
 const Header = () => {
     return (
         <div className='header'>
-            <div>
+            <Link to={'/loginTab'}>
                 <button className='LoginButton'>Login</button>
-            </div>
-            <div>
+            </Link>
+            <Link to={'/registrationTab'}>
                 <button className='logoutButton'>Register</button>
-            </div>
+            </Link>
         </div>
     )
 };
 
-export default Header;
+export default withRouter(Header);

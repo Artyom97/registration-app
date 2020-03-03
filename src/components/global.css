@@ -15,7 +15,7 @@ body {
     padding: 25px;
     max-width: 350px;
     border: 1px solid red;
-    margin: auto;
+    margin:100px auto;
     display: flex;
     justify-content: center;
     align-items: center;
