@@ -4,21 +4,31 @@ import './components/global.css';
 import LoginTab from "./components/LoginTab";
 import Demo from './components/RegistrationTab';
 import Header from './components/Header';
-import {Route, Switch, BrowserRouter} from 'react-router-dom';
-
+import Profile from "./components/Profile";
+import { Route, Switch, BrowserRouter} from 'react-router-dom';
 
 class App extends Component {
-  render = () => (
-      <div>
-          <BrowserRouter>
-              <Header />
-              <Switch>
-                  <Route exact path='/loginTab' component={LoginTab}/>
-                  <Route exact path='/registrationTab' component={Demo}/>
-              </Switch>
-          </BrowserRouter>
-      </div>
-  )
-}
+    state = {
+        user: null
+    };
 
+    setUser = (user) => {
+        this.setState({
+           user
+        });
+    };
+
+    render = () => (
+        <div>
+            <BrowserRouter>
+                <Header isAuth={!!this.state.user}  history={this.props.history} setUser={this.setUser} />
+                <Switch>
+                    <Route exact path='/login' render={(props) => <LoginTab setUser={this.setUser} {...props} />} />
+                    <Route exact path='/registration' component={Demo} />
+                    <Route exact path='/profile' render={(props) => <Profile userData={this.state.user} {...props}/>  } />
+                </Switch>
+            </BrowserRouter>
+        </div>
+    )
+}
 export default App;

@@ -1,20 +1,35 @@
 body {
-    background: grey;
+    background: #9C9C9B;
 }
 .header {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
     height: 100px;
     margin-bottom: 200px;
+    padding: 30px;
+    background-color: dimgrey;
+    border: 1px solid black;
 }
-.LoginButton {
-    margin-right: 20px;
+.header > div {
+    display: flex;
+}
+.button {
+    color: black;
+    font-size: 20px;
+    background-color: dimgrey;
+    margin-left: 30px;
+    font-family: inherit;
+    border: dimgrey;
+}
+.button:hover {
+    color: deepskyblue;
+    transition: all 0.2s;
 }
 .container {
     padding: 25px;
     max-width: 350px;
-    border: 1px solid red;
+    border: 1px solid dimgrey;
     margin:100px auto;
     display: flex;
     justify-content: center;
