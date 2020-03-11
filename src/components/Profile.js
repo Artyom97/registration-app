@@ -1,7 +1,6 @@
 import React from "react";
 import ProfileImage from '../img/profile.png';
 
-
 function Profile({ userData }) {
     return (
       <div>
@@ -24,6 +23,6 @@ function Profile({ userData }) {
           </div>
       </div>
     );
-};
+}
 
 export default Profile;

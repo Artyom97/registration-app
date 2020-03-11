@@ -40,8 +40,6 @@ class Demo extends React.Component {
         axios.post(`http://localhost:4000/users/register`, this.state)
             .then(result => {
                 Props.push('/login');
-                // alert('registration was completed');
-
             });
     }
     render() {
